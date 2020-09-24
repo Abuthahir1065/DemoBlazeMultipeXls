@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.atmecs.demoblaze.AddCartPage">
+        <methods>
+          <include name="declaration"/>
+          <include name="closeBrowser"/>
+          <include name="addCartMethod"/>
+        </methods>
+      </class> <!-- com.atmecs.demoblaze.AddCartPage -->
+      <class name="com.atmecs.demoblaze.LoginPage">
+        <methods>
+          <include name="loginPageMethod"/>
+          <include name="declaration"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.atmecs.demoblaze.LoginPage -->
+      <class name="com.atmecs.demoblaze.ContactPage">
+        <methods>
+          <include name="declaration"/>
+          <include name="closeBrowser"/>
+          <include name="contactMethod"/>
+        </methods>
+      </class> <!-- com.atmecs.demoblaze.ContactPage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
