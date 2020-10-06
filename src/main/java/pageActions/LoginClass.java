@@ -16,25 +16,22 @@ import org.testng.annotations.Test;
 import browser.SetUp;
 import constant.Constant;
 import helper.HelperClass;
+import reader.LoginDataProvider;
 import reader.PropertyReader;
+import reader.SignInDataProvider;
 
 public class LoginClass extends SetUp {
 
-	Properties Location_path, Data_path;
+	Properties Location_path;
 
-
-	public void login() throws InterruptedException, IOException {
-		Location_path=PropertyReader.readProperty(Constant.LOCATOR_FILE_PATH);
-		Data_path=PropertyReader.readProperty(Constant.DATA_FILE_PATH);
+	@Test(dataProvider = "Login", dataProviderClass = LoginDataProvider.class)
+	public void login(String username, String password) throws InterruptedException, IOException {
+		Location_path=PropertyReader.readProperty(Constant.LOCATOR_PATH);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		//WebDriverWait wait=new WebDriverWait(driver, 40);
-		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Location_path.getProperty("LoginId"))));
-
+		
 	HelperClass.selectElementById(driver, Location_path.getProperty("LoginId"));
-		HelperClass.ElementSelectorSendKeys(driver, Location_path.getProperty("Login_User"),
-				Data_path.getProperty("UsernameLogin"));
-		HelperClass.ElementSendKeys(driver, Location_path.getProperty("Login_Password"),
-				Data_path.getProperty("PasswordLogin"));
+		HelperClass.ElementSelectorSendKeys(driver, Location_path.getProperty("Login_User"),username);
+		HelperClass.ElementSendKeys(driver, Location_path.getProperty("Login_Password"),password);
 		HelperClass.elementClick(driver, Location_path.getProperty("LoginButton"));
 
 	}

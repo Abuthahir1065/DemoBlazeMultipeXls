@@ -1,67 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-24T07:20:04Z" name="Suite" finished-at="2020-09-24T07:20:46Z" duration-ms="41531">
+  <suite started-at="2020-10-01T05:46:01Z" name="Suite" finished-at="2020-10-01T05:46:25Z" duration-ms="24474">
     <groups>
     </groups>
-    <test started-at="2020-09-24T07:20:04Z" name="Test" finished-at="2020-09-24T07:20:46Z" duration-ms="41531">
-      <class name="com.atmecs.demoblaze.AddCartPage">
-        <test-method is-config="true" signature="declaration()[pri:0, instance:com.atmecs.demoblaze.AddCartPage@7c417213]" started-at="2020-09-24T07:20:27Z" name="declaration" finished-at="2020-09-24T07:20:34Z" duration-ms="6896" status="PASS">
+    <test started-at="2020-10-01T05:46:01Z" name="Test" finished-at="2020-10-01T05:46:25Z" duration-ms="24474">
+      <class name="pageActions.ContactClass">
+        <test-method is-config="true" signature="declaration()[pri:0, instance:pageActions.ContactClass@1460a8c0]" started-at="2020-10-01T05:46:17Z" name="declaration" finished-at="2020-10-01T05:46:22Z" duration-ms="5262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- declaration -->
-        <test-method signature="addCartMethod()[pri:3, instance:com.atmecs.demoblaze.AddCartPage@7c417213]" started-at="2020-09-24T07:20:34Z" name="addCartMethod" finished-at="2020-09-24T07:20:46Z" duration-ms="11413" status="PASS">
+        <test-method signature="contact(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pageActions.ContactClass@1460a8c0]" started-at="2020-10-01T05:46:22Z" name="contact" data-provider="Contact" finished-at="2020-10-01T05:46:23Z" duration-ms="586" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abu@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abutuhahir]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Query Raising]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addCartMethod -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.atmecs.demoblaze.AddCartPage@7c417213]" started-at="2020-09-24T07:20:46Z" name="closeBrowser" finished-at="2020-09-24T07:20:46Z" duration-ms="81" status="PASS">
+        </test-method> <!-- contact -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:pageActions.ContactClass@1460a8c0]" started-at="2020-10-01T05:46:23Z" name="closeBrowser" finished-at="2020-10-01T05:46:25Z" duration-ms="2101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.atmecs.demoblaze.AddCartPage -->
-      <class name="com.atmecs.demoblaze.ContactPage">
-        <test-method is-config="true" signature="declaration()[pri:0, instance:com.atmecs.demoblaze.ContactPage@6107227e]" started-at="2020-09-24T07:20:19Z" name="declaration" finished-at="2020-09-24T07:20:25Z" duration-ms="5590" status="PASS">
+      </class> <!-- pageActions.ContactClass -->
+      <class name="pageActions.LoginClass">
+        <test-method is-config="true" signature="declaration()[pri:0, instance:pageActions.LoginClass@79ca92b9]" started-at="2020-10-01T05:46:11Z" name="declaration" finished-at="2020-10-01T05:46:17Z" duration-ms="5969" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- declaration -->
-        <test-method signature="contactMethod()[pri:3, instance:com.atmecs.demoblaze.ContactPage@6107227e]" started-at="2020-09-24T07:20:25Z" name="contactMethod" finished-at="2020-09-24T07:20:25Z" duration-ms="538" status="PASS">
+        <test-method signature="login(java.lang.String, java.lang.String)[pri:0, instance:pageActions.LoginClass@79ca92b9]" started-at="2020-10-01T05:46:17Z" name="login" data-provider="Login" finished-at="2020-10-01T05:46:17Z" duration-ms="410" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AbuthahirM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[AbuthahirM@123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- contactMethod -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.atmecs.demoblaze.ContactPage@6107227e]" started-at="2020-09-24T07:20:25Z" name="closeBrowser" finished-at="2020-09-24T07:20:27Z" duration-ms="2317" status="PASS">
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:pageActions.LoginClass@79ca92b9]" started-at="2020-10-01T05:46:17Z" name="closeBrowser" finished-at="2020-10-01T05:46:17Z" duration-ms="61" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.atmecs.demoblaze.ContactPage -->
-      <class name="com.atmecs.demoblaze.SignupPage">
-        <test-method is-config="true" signature="declaration()[pri:0, instance:com.atmecs.demoblaze.SignupPage@2b6856dd]" started-at="2020-09-24T07:20:04Z" name="declaration" finished-at="2020-09-24T07:20:11Z" duration-ms="6695" status="PASS">
+      </class> <!-- pageActions.LoginClass -->
+      <class name="pageActions.SignupClass">
+        <test-method is-config="true" signature="declaration()[pri:0, instance:pageActions.SignupClass@8909f18]" started-at="2020-10-01T05:46:01Z" name="declaration" finished-at="2020-10-01T05:46:09Z" duration-ms="7285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- declaration -->
-        <test-method signature="signUpMethod()[pri:1, instance:com.atmecs.demoblaze.SignupPage@2b6856dd]" started-at="2020-09-24T07:20:11Z" name="signUpMethod" finished-at="2020-09-24T07:20:13Z" duration-ms="1592" status="PASS">
+        <test-method signature="signup(java.lang.String, java.lang.String)[pri:0, instance:pageActions.SignupClass@8909f18]" started-at="2020-10-01T05:46:09Z" name="signup" data-provider="SignIn" finished-at="2020-10-01T05:46:10Z" duration-ms="1687" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AbuthahirM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[AbuthahirM@123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signUpMethod -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.atmecs.demoblaze.SignupPage@2b6856dd]" started-at="2020-09-24T07:20:13Z" name="closeBrowser" finished-at="2020-09-24T07:20:13Z" duration-ms="68" status="PASS">
+        </test-method> <!-- signup -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:pageActions.SignupClass@8909f18]" started-at="2020-10-01T05:46:10Z" name="closeBrowser" finished-at="2020-10-01T05:46:11Z" duration-ms="204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.atmecs.demoblaze.SignupPage -->
-      <class name="com.atmecs.demoblaze.LoginPage">
-        <test-method is-config="true" signature="declaration()[pri:0, instance:com.atmecs.demoblaze.LoginPage@5db45159]" started-at="2020-09-24T07:20:13Z" name="declaration" finished-at="2020-09-24T07:20:18Z" duration-ms="5729" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- declaration -->
-        <test-method signature="loginPageMethod()[pri:2, instance:com.atmecs.demoblaze.LoginPage@5db45159]" started-at="2020-09-24T07:20:18Z" name="loginPageMethod" finished-at="2020-09-24T07:20:19Z" duration-ms="526" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginPageMethod -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.atmecs.demoblaze.LoginPage@5db45159]" started-at="2020-09-24T07:20:19Z" name="closeBrowser" finished-at="2020-09-24T07:20:19Z" duration-ms="54" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.atmecs.demoblaze.LoginPage -->
+      </class> <!-- pageActions.SignupClass -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

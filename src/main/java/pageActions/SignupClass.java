@@ -20,26 +20,23 @@ import browser.SetUp;
 import constant.Constant;
 import helper.HelperClass;
 import reader.PropertyReader;
+import reader.SignInDataProvider;
 
 public class SignupClass extends SetUp {
-	
-	
-	Properties Location_path,Data_path;
 
-	public void signUp() throws FileNotFoundException, IOException
-	{    
+	Properties Location_path;
 
-	
-		Location_path=PropertyReader.readProperty(Constant.LOCATOR_FILE_PATH);
-		Data_path=PropertyReader.readProperty(Constant.DATA_FILE_PATH);
-       
-//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Location_path.getProperty("SignIn_Id"))));
+	@Test(dataProvider = "SignIn", dataProviderClass = SignInDataProvider.class)
+	public void signup(String username, String password) throws InterruptedException {
+
+		Location_path = PropertyReader.readProperty(Constant.LOCATOR_PATH);
+
 		HelperClass.selectElementById(driver, Location_path.getProperty("SignIn_Id"));
-		HelperClass.ElementSelectorSendKeys(driver, Location_path.getProperty("Signup_Username"), Data_path.getProperty("UsernameSignup"));
-		HelperClass.ElementSendKeys(driver, Location_path.getProperty("Signup_Password"), Data_path.getProperty("PasswordSignup"));
-	    HelperClass.elementClick(driver, Location_path.getProperty("ButtonXpath"));
-	    WebDriverWait wait = new WebDriverWait(driver, 30);
-		
+		HelperClass.ElementSelectorSendKeys(driver, Location_path.getProperty("Signup_Username"), username);
+		HelperClass.ElementSendKeys(driver, Location_path.getProperty("Signup_Password"), password);
+		HelperClass.elementClick(driver, Location_path.getProperty("ButtonXpath"));
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+
 		wait.until(ExpectedConditions.alertIsPresent());
 		driver.switchTo().alert().accept();
 

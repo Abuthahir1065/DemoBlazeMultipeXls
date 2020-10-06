@@ -3,12 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.atmecs.demoblaze.SignupPage"/>
-      <class name="com.atmecs.demoblaze.LoginPage"/>
-       <class name="com.atmecs.demoblaze.ContactPage"/>
-      
-      <class name="com.atmecs.demoblaze.AddCartPage"/>
-      
+      <class name="pageActions.SignupClass"/>
+      <class name="pageActions.LoginClass"/>
+      <class name="pageActions.ContactClass"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

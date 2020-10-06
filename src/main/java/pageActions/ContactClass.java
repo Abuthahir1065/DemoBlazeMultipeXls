@@ -17,20 +17,22 @@ import org.testng.annotations.Test;
 import browser.SetUp;
 import constant.Constant;
 import helper.HelperClass;
+import reader.ContactDataProvider;
 import reader.PropertyReader;
+import reader.SignInDataProvider;
 
 public class ContactClass extends SetUp {
-	Properties Location_path,Data_path;
+	Properties Location_path;
+	@Test(dataProvider = "Contact", dataProviderClass = ContactDataProvider.class)
 
-	public void contact() throws InterruptedException {
-		Location_path=PropertyReader.readProperty(Constant.LOCATOR_FILE_PATH);
-		Data_path=PropertyReader.readProperty(Constant.DATA_FILE_PATH);
+	public void contact(String mail,String name,String message) throws InterruptedException {
+		Location_path=PropertyReader.readProperty(Constant.LOCATOR_PATH);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		HelperClass.elementClick(driver, Location_path.getProperty("ContactLink"));
-		HelperClass.ElementSelectorSendKeys(driver, Location_path.getProperty("Recipient_Email"), Data_path.getProperty("Recipient_Mail"));
-		HelperClass.ElementSelectorSendKeys(driver, Location_path.getProperty("Recipient_name"), Data_path.getProperty("Recipient_Name"));
-		HelperClass.sendKeyById(driver, Location_path.getProperty("Messageid"), Data_path.getProperty("Message"));
+		HelperClass.ElementSelectorSendKeys(driver, Location_path.getProperty("Recipient_Email"), mail);
+		HelperClass.ElementSelectorSendKeys(driver, Location_path.getProperty("Recipient_name"),name);
+		HelperClass.sendKeyById(driver, Location_path.getProperty("Messageid"),message);
 
 		HelperClass.elementClick(driver, Location_path.getProperty("SendMessage"));
 

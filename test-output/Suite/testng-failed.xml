@@ -3,27 +3,27 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.atmecs.demoblaze.AddCartPage">
+      <class name="pageActions.LoginClass">
         <methods>
           <include name="declaration"/>
+          <include name="login"/>
           <include name="closeBrowser"/>
-          <include name="addCartMethod"/>
         </methods>
-      </class> <!-- com.atmecs.demoblaze.AddCartPage -->
-      <class name="com.atmecs.demoblaze.LoginPage">
+      </class> <!-- pageActions.LoginClass -->
+      <class name="pageActions.ContactClass">
         <methods>
-          <include name="loginPageMethod"/>
+          <include name="contact"/>
           <include name="declaration"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.atmecs.demoblaze.LoginPage -->
-      <class name="com.atmecs.demoblaze.ContactPage">
+      </class> <!-- pageActions.ContactClass -->
+      <class name="pageActions.SignupClass">
         <methods>
+          <include name="signup"/>
           <include name="declaration"/>
           <include name="closeBrowser"/>
-          <include name="contactMethod"/>
         </methods>
-      </class> <!-- com.atmecs.demoblaze.ContactPage -->
+      </class> <!-- pageActions.SignupClass -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
